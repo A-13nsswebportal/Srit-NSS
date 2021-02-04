@@ -1,0 +1,133 @@
+
+
+{% include 'template.html' %}
+
+{% block content %}
+
+					<div id="jsn-content" class="">
+				<div id="jsn-content_inner"><div id="jsn-content_inner1"><div id="jsn-content_inner2"><div id="jsn-content_inner3"><div id="jsn-content_inner4"><div id="jsn-content_inner5"><div id="jsn-content_inner6"><div id="jsn-content_inner7" class="row-fluid">
+						<div id="jsn-maincontent" class="span12 order1 ">
+					<div id="jsn-maincontent_inner1"><div id="jsn-maincontent_inner" class="row-fluid">
+								<div id="jsn-centercol" class="span12 order1 ">
+							<div id="jsn-centercol_inner">
+									<div id="jsn-mainbody-content" class=" jsn-hasmainbody">
+											<div id="jsn-mainbody">
+										<div id="system-message-container">
+	</div>
+
+											<div class="login ">
+
+											<h1>Admin Login</h1>
+	
+	<form action="{{ url_for('add_circular') }}" method="post" class="form-validate form-horizontal well">
+
+		<fieldset>
+												<div class="control-group">
+						<div class="control-label">
+							<label id="name-lbl" for="username" class="required">
+	Name<span class="star">&#160;*</span></label>
+						</div>
+						<div class="controls">
+							<input type="text" name="name" id="username"  value="" class="validate-username required" size="25"       required aria-required="true"   autofocus    />
+						</div>
+					</div>
+
+				<div class="control-group">
+						<div class="control-label">
+							<label id="date-lbl" for="password" class="required">
+	Date<span class="star">&#160;*</span></label>
+						</div>
+						<div class="controls">
+							<input type="date" name="date" id="password" value=""   class="validate-password required"   size="25" maxlength="99" required aria-required="true"  />						</div>
+					</div>
+						
+
+						<div class="control-group">
+						<div class="control-label">
+							<label id="venue-lbl" for="password" class="required">
+
+	Venue<span class="star">&#160;*</span></label>
+						</div>
+						<div class="controls">
+							<input type="text" name="venue" id="password" value=""   class="validate-password required"   size="25" maxlength="99" required aria-required="true"  />						</div>
+					</div>	
+
+	<div class="control-group">
+						<div class="control-label">
+							<label id="password-lbl" for="password" class="required">
+	Info<span class="star">&#160;*</span></label>
+						</div>
+						<div class="controls">
+							<textarea name="info" rows="5" cols="10"></textarea>
+												</div>
+					</div>
+			
+
+<div class="control-group">
+						<div class="control-label">
+							<label id="name-lbl" for="username" class="required">
+	Google docs Link<span class="star">&#160;*</span></label>
+						</div>
+						<div class="controls">
+							<input type="text" name="Link" id="username"  value="" class="validate-username required" size="25"       required aria-required="true"   autofocus    />
+						</div>
+					</div>
+
+
+
+			<div class="control-group">
+				<div class="controls">
+					<button type="submit" class="btn btn-primary">
+						Submit					</button>
+				</div>
+			</div>
+
+			<input type="hidden" name="return" value="" />
+			<input type="hidden" name="92dbdd7f518090844354a48bc39c285f" value="1" />		</fieldset>
+	</form>
+</div>
+	<div class="clearbreak"></div>	
+									</div>
+										</div>
+		        				</div></div> <!-- end centercol -->
+        				</div></div></div> <!-- end jsn-maincontent -->
+		                </div></div></div></div></div></div></div></div>
+            </div>
+
+					<div id="jsn-footer">
+				<div id="jsn-footermodules" class="jsn-modulescontainer jsn-modulescontainer2 row-fluid">
+								<div id="jsn-pos-footer" class="span6">
+						<div class=" jsn-modulecontainer"><div class="jsn-modulecontainer_inner"><div class="jsn-modulecontent">
+<div class="jsn-mod-custom">
+	<p>Copyright © 2019 - 2020 State National service Scheme. All rights reserved. </p></div><div class="clearbreak"></div></div></div></div><div class=" jsn-modulecontainer"><div class="jsn-modulecontainer_inner"><div class="jsn-modulecontent">
+<ul class="menu-divmenu">
+<li  class="first"><a  href="{{ url_for('adminstrator') }}" >
+	<span>
+		Adminstrator	</span>
+</a></li><div class="clearbreak"></div></div></div></div>
+					</div>
+								<div id="jsn-pos-bottom" class="span6">
+						<div class=" jsn-modulecontainer"><div class="jsn-modulecontainer_inner"><div class="jsn-modulecontent">
+<div class="jsn-mod-custom">
+	<div class="ja-cert">
+<p>Designed and Maintained by <a href="http://www.ihrd.ac.in/"> Srit, Ananthapuram</a></p>
+</div></div><div class="clearbreak"></div></div></div></div>
+					</div>
+								<div class="clearbreak"></div>
+				</div>
+			</div>
+			</div>
+</body>
+<meta http-equiv="content-type" content="text/html;charset=utf-8"><!-- /Added by HTTrack -->
+</html>
+
+{% endblock %}
+
+
+
+
+
+
+
+
+

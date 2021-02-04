@@ -1,0 +1,67 @@
+
+
+<html lang="en">
+<head>
+  <title>Add Volunteer</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+</head>
+<body>
+
+	<div class="container">
+		<h1>Add Volunteer</h1>
+
+		<div class="row" style="padding: 40px;">
+			<form action="{{ url_for('add_volunteer') }}" method="POST" enctype="multipart/form-data">
+				<p>{{err}}</p>
+			  <div class="form-group">
+			    	<label>Name:</label>
+			    	{{ form.name(class="form-control") }}
+			  </div>
+			  <div class="form-group">
+			    	<label>Branch:</label>
+			    	{{ form.branch(class="form-control") }}
+			  </div>
+			  <div class="form-group">
+			    	<label>Roll No:</label>
+			    	{{ form.rollno(class="form-control") }}
+			  </div>
+			  <div class="form-group">
+			      	<label>Email:</label>
+			  	  	{{ form.email(class="form-control") }}
+			  </div>
+			  <div class="form-group">
+				    <label>Mobile:</label>
+				    {{ form.mobile(class="form-control") }}
+			  </div>
+			  <div class="form-group">
+				    <label>Password:</label>
+				    {{ form.password(class="form-control") }}
+			  </div>
+			  <div class="form-group">
+				    <label>Gender</label>
+				    {{ form.gender() }}
+				    &nbsp
+				    <label>Year:</label>
+				    {{ form.year() }}
+			  </div>
+
+			  <div class="form-group">
+			  	  	<label>Upload Image:</label>
+			    	{{ form.image(class="form-control") }}
+			  </div>
+
+			  <button type="submit" class="btn btn-Success">Submit</button>
+			</form>
+		</div>
+
+	</div>
+
+</body>
+
+</html>
+
+

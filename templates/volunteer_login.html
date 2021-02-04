@@ -1,0 +1,53 @@
+{% include "template.html" %}
+
+{% block content %}
+
+
+    <!--=============================================
+                  Login part start
+    ==============================================-->
+    <section id="claim_part" class="client_bg client_bg2 sign_form_part login_form_part">
+        <div class="container">                
+
+            <div class="row signup_form_pad log_form_pad">
+				<div class="col-lg-7 offset-lg-5">
+					<div class="main_signup login_main">
+						<h4>Log in</h4>
+						<p>Log in quickly to get all other facilities</p>
+						<form action="{{ url_for('volunteer_login') }}" method="POST">
+							<div class="signup_inner log_inner">
+								<div class="sign_input_inner">
+									{{form.username(placeholder="Enter Your Name") }}						
+									<i class="fas fa-user"></i>
+								</div>
+								<div class="sign_input_inner">
+									{{form.password(placeholder="Your Password") }}
+									<i class="fas fa-lock"></i>
+								</div>
+                                <p style="color: red;">{{ err }}</p>
+								<button type="submit">Log in</button>
+								<a href="#">Forget password</a>
+							</div>
+						</form>
+					</div>
+				</div>
+				
+            </div>
+        </div>
+    </section>
+
+    <!--=============================================
+                    Login part end
+    ===========================================   -->
+
+
+    <script src="static/js/jquery-1.12.4.min.js"></script>
+    <script src="static/js/popper.min.js"></script>
+    <script src="static/js/bootstrap.min.js"></script>
+    <script src="static/js/jquery.nicescroll.min.js"></script>
+    <script src="static/js/jquery.countdown.min.js"></script>
+    <script src="static/js/slick.min.js"></script>
+    <script src="static/js/venobox.min.js"></script>
+    <script src="static/js/script.js"></script>
+
+{% endblock %}

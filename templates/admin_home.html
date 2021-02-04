@@ -1,0 +1,28 @@
+{% include "template.html" %}
+
+{% block content %}
+
+<div>
+
+	<a class="btn btn-success" style="float: right; margin-right: 50px;" href="{{ url_for('add_volunteer') }}">Add Volunteer</a><br><br>
+
+	<div class="container">
+		<h2 style="float: left; margin-left: 50px;">All Co-ordinates</h2><br><br><br>
+		<div class="row">
+			{% for i in data %}
+				<div class="col-lg-3" style="border: 1px solid black; padding: 20px; margin: 5px;">
+					<img src="{{ i.picture }}">
+					<p>Name :  {{ i.name }}  </p>	
+					<h4>branch : {{ i.branch }}  </h4>	
+					<h4>Roll No : {{ i.rollno }}  </h4>	
+					<h4>Mobile : {{ i.mobileno }}  </h4>	
+					<p> Email :	{{ i.email }} </p>
+					<p> Password : 	{{ i.password }}  </p>			
+				</div>
+			{% endfor %}
+		</div>
+	</div>
+
+</div>
+
+{% endblock %}

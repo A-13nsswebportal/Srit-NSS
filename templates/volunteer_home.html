@@ -1,0 +1,32 @@
+{% include "template.html" %}
+
+{% block content %}
+
+<div>
+	<h1>Volunteer home</h1>
+
+
+	{% if vol_status == 1 %}
+		<a class="btn btn-success" style="float: right; margin-right: 50px;" href="{{ url_for('vol_add_image') }}">Add Event</a>
+		<br><br>
+	{% endif %}
+
+	<div class="container">
+		<h2 style="float: left; margin-left: 50px;">My Events</h2><br><br><br>
+		<div class="row">
+			{% for i in events %}
+				<a href="{{ url_for('vol_show_Event', event_id = i.id) }}">
+					<div class="col-lg-3" style="border: 1px solid black; padding: 20px; margin: 5px;">
+						<h3>{{ i.name }}  </h3>	
+						<p> Venue :	{{ i.venue }} </p>
+ 						<p> Date : 	{{ i.date }}  </p>			
+					</div>
+				</a>	
+			{% endfor %}
+		</div>
+	</div>
+
+</div>
+
+{% endblock %}
+

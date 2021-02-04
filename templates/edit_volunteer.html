@@ -1,0 +1,52 @@
+
+{% include 'template.html' %}
+
+
+{% block content %}
+
+	<div class="container">
+		<h1>Edit Volunteer</h1>
+
+		<div class="row" style="padding: 40px;">
+			<form action="{{ url_for('edit_volunteer', vol_id = vol.id) }}" method="POST" enctype="multipart/form-data">
+				<p>{{err}}</p>
+			  <div class="form-group">
+			    	<label>Name:</label>
+			    	{{ form.name(class="form-control", value=vol.name) }}
+ 			  </div>
+			  <div class="form-group">
+			    	<label>Branch:</label>
+			    	{{ form.branch(class="form-control", value=vol.branch) }}
+			  </div>
+			  <div class="form-group">
+			    	<label>Roll No:</label>
+			    	{{ form.rollno(class="form-control", value=vol.rollno) }}
+			  </div>
+			  <div class="form-group">
+			      	<label>Email:</label>
+			  	  	{{ form.email(class="form-control", value=vol.email) }}
+			  </div>
+			  <div class="form-group">
+				    <label>Mobile:</label>
+				    {{ form.mobile(class="form-control", value=vol.mobileno) }}
+			  </div>
+			  <div class="form-group">
+				    <label>Password:</label>
+				    {{ form.password(class="form-control", value=vol.pasword) }}
+			  </div>
+			  <div class="form-group">
+			  	  	<label>Upload Image:</label>
+			    	{{ form.image(class="form-control") }}
+			  </div>
+			  <button type="submit" class="btn btn-Success">Submit</button>
+			</form>
+		</div>
+
+	</div>
+
+</body>
+
+</html>
+
+
+{% endblock %}

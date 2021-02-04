@@ -1,0 +1,7 @@
+environment variable - cloudinary://864958336537584:9pdIobVo8gm_R3Z6trBiRje1UDA@dfh7rajme/
+
+api secreat - 9pdIobVo8gm_R3Z6trBiRje1UDA
+
+api key - 864958336537584
+
+cloud name - dfh7rajme

@@ -1,0 +1,33 @@
+{% include 'template.html' %}
+
+{% block content %}
+
+<h1>Registered Students</h1>
+
+{% if admin_status == 1 %}
+	<a class="btn btn-success" style="float: right; margin-right: 50px;" href="{{ url_for('export_excel') }}">Export to Excel</a><br><br>
+	{% endif %}
+
+<div class="container">
+			<div class="row">
+				{% for i in regis %}
+					<div class="col-lg-3" style="border: 1px solid black; height: 40%; width: 300px; padding: 10px; margin: 5px;">
+						<img src="{{ i.picture }}" style="width: 250px; height: 200px;">
+						<h4>Name :  {{ i.name }}  </h4>	
+						<p>Branch : {{ i.branch }}  </p>	
+						<p>Roll No : {{ i.rollno }}  </p>	
+						<p>Mobile : {{ i.mobileno }}  </p>	
+						<p> Email :	{{ i.email }} </p>
+						<p> Gender :	{{ i.gender }} </p>	
+						<p> Year : {{ i.year }}</p>
+						<a href="{{ url_for('register_accept', id = i.id) }}">Accept</a>
+					</div>
+				{% endfor %}
+			</div>
+		</div>
+
+
+
+
+
+{% endblock %}

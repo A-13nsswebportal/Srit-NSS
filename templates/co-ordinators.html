@@ -1,0 +1,39 @@
+
+
+{% include 'template.html' %}
+
+{% block content %}
+
+					<div class="container" style="width: 100%; margin-bottom: 50px;">
+
+	{% if admin_status == 1 %}
+	<a class="btn btn-success" style="float: right; margin-right: 50px;" href="{{ url_for('add_volunteer') }}">Add Volunteer</a><br><br>
+	{% endif %}
+
+		<h2 style="float: left; margin-left: 50px;">All Co-ordinates</h2><br><br><br><br>
+
+
+		<div class="container">
+			<div class="row">
+				{% for i in data %}
+					<div class="col-lg-3" style="border: 1px solid black; height: 40%; width: 300px; padding: 10px; margin: 5px;">
+						<img src="{{ i.picture }}" style="width: 250px; height: 200px;">
+						<h4>Name :  {{ i.name }}  </h4>	
+						<p>Branch : {{ i.branch }}  </p>	
+						<p>Roll No : {{ i.rollno }}  </p>	
+						<p>Mobile : {{ i.mobileno }}  </p>	
+						<p> Email :	{{ i.email }} </p>
+						{% if admin_status == 1 %}
+							<h4> Password : 	{{ i.pasword }}  </h4>	
+							<a href="{{ url_for('edit_volunteer', vol_id = i.id) }}">Edit</a>
+							<a href="{{ url_for('delete_volunteer', vol_id = i.id) }}">Delete</a>
+						{% endif %}		
+					</div>
+				{% endfor %}
+			</div>
+		</div>
+
+</div>
+
+
+{% endblock %}

@@ -1,0 +1,85 @@
+
+
+<html lang="en">
+<head>
+  <title>Volunteer Add Event</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+</head>
+<body>
+
+
+
+	<div class="container">
+		<h1>Volunteer Add Event</h1>
+
+		<div class="row" style="padding: 40px;">
+			<form id="bulkphotoupload"  action="{{url_for('vol_add_image') }}" method="POST" enctype="multipart/form-data">
+			  <div class="form-group">
+			    <label>Event Name:</label>
+			    <input type="text" name="name" class="form-control">
+			  </div>
+			  <div class="form-group">
+			    <label>Event Venue:</label>
+			    <input type="venue" name="venue" class="form-control">
+			  </div>
+			    <div class="form-group">
+			    <label>Event Date:</label>
+			    <input type="date" name="date" class="form-control">
+			  </div>
+			    <div class="form-group">
+			    <label>Event Info:</label>
+			    <textarea class="form-control" name="info" rows="5" cols="20"></textarea> 
+			  </div>
+			    <div class="form-group">
+			    <label>Images:</label>
+			    {% for i in range(8) %}
+					<input type="file" name="{{i}}" class="form-control">
+				{% endfor %}
+			  </div>
+			  <button type="submit" class="btn btn-default">Submit</button>
+			</form>
+		</div>
+
+	</div>
+
+</body>
+
+</html>
+
+	<!-- <h2>Number of Photos</h2><input type="number" id="num" value="0" name="count" onchange="uploadform()"> -->
+
+<!-- 
+<form id="bulkphotoupload" action="{{url_for('vol_add_image') }}" method="POST" enctype="multipart/form-data">
+	<input type="hidden" name="count" id="val" value=""><br>
+	Event Date:<input type="text" name="name"><br>
+	Event Venue:<input type="venue" name="venue"><br>
+	Event Date:<input type="date" name="date"><br>
+	Event Info:<textarea name="Info" rows="5" cols="20"></textarea>
+</form>
+
+</div>
+<script type="text/javascript">
+	
+function uploadform(){
+		let formupload=$('bulkphotoupload');
+		let forms_size=$("num").value;
+		var formelements='';
+		$("val").value=$("num").value;
+		for(let i=0;i<forms_size;i++){
+			formelements+=`<input type="file" name="${i}">`;
+		}
+		formelements+=`<input type="submit">`;
+		formupload.innerHTML= formelements;
+		
+	
+}
+
+
+</script>
+ -->
+
+

@@ -1,0 +1,30 @@
+
+{% include "template.html" %}
+
+{% block content %}
+
+<div class="row" style="margin-bottom: 50px;">
+
+	<h1>Event Name: {{ event.name }}</h1>
+
+	<div class="col-lg-2"></div>
+
+	<div class="col-lg-8" >
+		<h3>Venue: {{ event.venue }}</h3>
+		<h3>Date: {{ event.date }}</h3>
+		<p style="font-size: 20px; ">Information: {{ event.info }}</p>
+		<div class="row">
+			{% for i in urls %}
+				<div class="col-lg-4" style="margin: 20px;">
+					<img src={{i}} style="width: 100%; height: 100%;">
+				</div>
+			{% endfor %}
+		</div>
+	</div>
+
+	<div class="col-lg-2"></div>
+
+</div>
+
+{% endblock %}
+
